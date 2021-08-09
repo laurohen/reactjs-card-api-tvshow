@@ -1,0 +1,17 @@
+/* .ListEpisodes {} */
+
+.Wrapper {
+    flex-direction: row;
+    display: flex;
+  }
+  .cardImage {
+    width: 50vh;
+  }
+  @media screen and (max-width: 992px) {
+    .Wrapper {
+      flex-direction: column;
+    }
+    .cardImage {
+      width: 100%;
+    }
+  }
