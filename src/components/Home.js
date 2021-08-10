@@ -13,7 +13,7 @@ const Home = () => {
   
   useEffect(() => {
     const fetchData = async () => {
-      if (data.length == 0 && item) {
+      if (data.length === 0 && item) {
         await dispatch(getItemList());
         return setData(item);
       }
