@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useEffect, useState } from "react";
 import s from "./Detail.module.css";
 import { Card } from "react-bootstrap";
 import axios from "axios";
@@ -15,7 +15,7 @@ const Detail = ({ match }) => {
     console.log("result :"  , data);
     setItem(data);
   };
-  if (item.length === 0) {
+  if (item.length == 0) {
     getItem();
   }
   const { image, name, summary, airdate, _embedded } = item;

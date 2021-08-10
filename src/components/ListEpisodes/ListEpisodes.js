@@ -1,4 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import s from "./ListEpisodes.module.css";
+import styles from './ListEpisodes.module.css';
+import { Card } from "react-bootstrap";
 import axios from "axios";
 import { withRouter } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -18,10 +22,10 @@ const ListEpisodes = ({ idShow }) => {
     console.log("result :"  , data);
     setItem(data);
   };
-  if (item.length === 0) {
+  if (item.length == 0) {
     getItem();
   }
-  const {summary} = item;
+  const { image, name, summary, season, number } = item;
 
   return (
     <>
